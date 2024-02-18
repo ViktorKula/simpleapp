@@ -25,4 +25,9 @@ class CustomSignupForm(SignupForm):
             message=f'Пользователь {user.username} зарегистрировался на сайте.'
         )
 
+        mail_managers(
+            subject='Новый пользователь!',
+            message=f'Пользователь {user.username} зарегистрировался на сайте.'
+        )
+
         return user

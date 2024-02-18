@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
+
+    "django_apscheduler",
 ]
 
 
@@ -85,6 +87,9 @@ ADMINS = (
     ('NP', 'info.news.portal@yandex.ru'),
 )
 
+MANAGERS = (
+    ('Vic', 'vicyru@yandex.ru'),
+)
 
 # SOCIALACCOUNT_PROVIDERS = {
 #     'yandex': {
