@@ -21,4 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),  # Оставили только allauth
     path("products/", include("simpleapp.urls")),
+    path('', include("mc_donalds.urls")),
 ]
