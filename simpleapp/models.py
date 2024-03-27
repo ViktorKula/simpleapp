@@ -11,6 +11,11 @@ class Product(models.Model):
     quantity = models.IntegerField(validators=[MinValueValidator(0, 'Quantity should be >= 0')])
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
+    # допишем свойство, которое будет отображать есть ли товар на складе
+    @property
+    def on_stock(self):
+        return self.quantity > 0
+
     def __str__(self):
         return f'{self.name} {self.quantity}'
 
